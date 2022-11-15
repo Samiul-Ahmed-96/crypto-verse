@@ -1,16 +1,18 @@
 .main {
-  width: 100%;
+  width: 85%;
   min-height: 100vh;
   background: #f0f2f5;
   padding: 60px;
+  float: right;
 }
-.main-layout {
-  display: flex;
-  height: 100vh;
-}
+
 
 .navbar {
   background: #001529;
   text-align: center;
   padding: 60px 0px;
+  width: 15%;
+  position: fixed;
+  height: 100vh;
+  float: left;
 }
