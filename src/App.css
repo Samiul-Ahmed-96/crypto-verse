@@ -33,3 +33,24 @@
 .search-crypto {
   margin: 20px 0px;
 }
+.news-image-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.news-image-container img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.provider-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+.ant-card-body p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}

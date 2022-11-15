@@ -8,7 +8,7 @@ const { Title } = Typography;
 
 const Homepage = () => {
 
-  const {data , isFetching} = useGetCryptosQuery(10);
+  const {data , isFetching} = useGetCryptosQuery(12);
 
   const totalCryptocurrencies = data?.data.stats.total;
   const totalExchanges = data?.data.stats.totalExchanges;
@@ -45,7 +45,7 @@ const Homepage = () => {
       </Row>
       <div className="cryptocurrencies-container">
           <div className="cryptocurrencies-heading">
-            <Title level={2}>Top 10 Crypto Currencies In The World</Title>
+            <Title level={2}>Top 12 Crypto Currencies In The World</Title>
             <Title level={4}><Link to="/cryptocurrencies">Show More</Link></Title>
           </div>
           <Cryptocurrencies simplified/>
