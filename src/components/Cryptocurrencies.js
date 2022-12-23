@@ -5,39 +5,33 @@ import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "../services/cryptoApi";
 const { Title } = Typography;
 
-const Cryptocurrencies = ({simplified}) => {
+const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 12 : 100;
   const { data: cryptoList, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState();
-  const [searchTerm , setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
-  console.log(cryptos);
+  useEffect(() => {
+    setCryptos(cryptoList?.data?.coins);
+    const filteredData = cryptoList?.data?.coins.filter((coin) =>
+      coin.name.toLowerCase().includes(searchTerm)
+    );
+    setCryptos(filteredData);
+  }, [searchTerm, cryptoList]);
 
-  useEffect(()=>{
-    setCryptos(cryptoList?.data?.coins)
-    const filteredData = cryptoList?.data?.coins.filter((coin) => coin.name.toLowerCase().includes(searchTerm));
-    setCryptos(filteredData)
-
-  },[searchTerm,cryptoList])
-
-  if(isFetching) return 'Loading';
+  if (isFetching) return "Loading";
 
   return (
     <>
-      {
-        !simplified && (
-          
-          <Title level={2}>All Crypto Currencies</Title>
-        )
-      }
-      {
-        !simplified && (
-          
-          <div className="search-crypto">
-          <Input placeholder="Search Crypto Currency" onChange={(e)=> setSearchTerm(e.target.value)}/>
+      {!simplified && <Title level={2}>All Crypto Currencies</Title>}
+      {!simplified && (
+        <div className="search-crypto">
+          <Input
+            placeholder="Search Crypto Currency"
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
         </div>
-        )
-      }
+      )}
       <Row gutter={[32, 32]} className="crypto-card-container">
         {cryptos?.map((currency) => (
           <Col
