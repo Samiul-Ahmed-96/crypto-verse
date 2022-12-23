@@ -16,6 +16,9 @@
   padding: 10px;
 
 }
+.global-stats-wrapper {
+  margin-top: 25px;
+}
 
 .coin-image img {
   object-fit: cover;

@@ -21,8 +21,9 @@ const Homepage = () => {
   return (
     <>
       <Banner />
-      <Title level={2}>Global Crypto Stats</Title>
+      
       <div className="global-stats-wrapper">
+      <Title level={2}>Global Crypto Stats</Title>
         <Row gutter={[32, 32]}>
           <Col md={8} className="stats-item">
             <Statistic
