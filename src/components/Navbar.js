@@ -7,16 +7,18 @@ import {
 import { Avatar, Menu, Typography } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
-import icon from "../images/blockchain.png";
-
+import icon from '../images/blockchain.png';
 const Navbar = () => {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon} size="large" />
-        <Typography.Title level={4} className="logo">
-          <Link to="/">Crypto Verse</Link>
-        </Typography.Title>
+      <Avatar src={icon} size="large" />
+      <Typography.Title level={5} className="logo">
+        <Link to="/">Crypto Verse</Link>
+      </Typography.Title>
+      </div>
+      <div className="menu-container">
+        
         <Menu theme="dark">
           <Menu.Item icon={<HomeOutlined />}>
             <Link to="/">Home</Link>

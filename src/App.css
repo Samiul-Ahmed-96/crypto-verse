@@ -16,12 +16,27 @@
   height: 100vh;
   float: left;
 }
-
+.logo-container {
+  display: flex;
+  justify-content: start;
+  margin-left: 10px;
+  align-items: center;
+}
+.logo a {
+  color: #fff !important;
+  font-size: 25px;
+  margin-left: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
 .cryptocurrencies-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 30px 0px;
+}
+.exchange-image {
+  margin: 0px 15px;
 }
 .news-heading{
   display: flex;
