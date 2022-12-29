@@ -127,6 +127,15 @@
 .coin-link h5 {
   margin-right: 10px;
 }
+.stats-item .ant-statistic-title {
+  color: #001529;
+  font-size: 16px;
+  font-weight: 600;
+}
+.cryptocurrencies-container a {
+  color: #001529;
+  font-size: 14px;
+}
 @media screen and (max-width: 1440px) {
   .logo-container {
     justify-content: start;

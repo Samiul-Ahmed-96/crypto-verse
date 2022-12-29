@@ -4,7 +4,7 @@ import React from "react";
 
 import { useGetExchangesQuery } from "../services/cryptoApi";
 
-const { Text } = Typography;
+const { Text ,Title } = Typography;
 const { Panel } = Collapse;
 
 const Exchanges = () => {
@@ -13,12 +13,13 @@ const Exchanges = () => {
 
   return (
     <>
+    <Title level={2}>Top Crypto Exchanges</Title>
       {isFetching ? (
         <Spin />
       ) : (
         <Row>
           {exchangesList.map((exchange) => (
-            <Col md={24} sm={24}>
+            <Col md={24} xs={24} sm={24} className="exchange-item">
               <Collapse>
                 <Panel
                   key={exchange.uuid}
@@ -43,16 +44,20 @@ const Exchanges = () => {
                   <Col md={6}></Col>
 
                   <Row>
-                    <Col md={6} sm={24}>Price : ${millify(exchange.price)}</Col>
-                    
-                    <Col md={6} sm={24}>Rank : ${millify(exchange.rank)}</Col>
-                  
-                    <Col md={6} sm={24}>
+                    <Col md={6} xs={24} sm={24}>
+                      Price : ${millify(exchange.price)}
+                    </Col>
+
+                    <Col md={6} xs={24} sm={24}>
+                      Rank : ${millify(exchange.rank)}
+                    </Col>
+
+                    <Col md={6} xs={24} sm={24}>
                       Number Of Markets : {millify(exchange.numberOfMarkets)}
                     </Col>
-                    <Col md={
-                      6
-                    } sm={24}>Btc Price : {millify(exchange.btcPrice)}%</Col>
+                    <Col md={6} xs={24} sm={24}>
+                      Btc Price : {millify(exchange.btcPrice)}%
+                    </Col>
                   </Row>
                 </Panel>
               </Collapse>

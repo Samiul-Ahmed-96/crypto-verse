@@ -1,3 +1,4 @@
+import { RightOutlined } from "@ant-design/icons";
 import { Col, Row, Statistic, Typography } from "antd";
 import millify from "millify";
 import React from "react";
@@ -24,39 +25,39 @@ const Homepage = () => {
       
       <div className="global-stats-wrapper">
       <Title level={2}>Global Crypto Stats</Title>
-        <Row gutter={[32, 32]}>
-          <Col md={8} sm={24} className="stats-item">
+        <Row gutter={[24, 24]}>
+          <Col md={8} xs={12} sm={24} className="stats-item">
             <Statistic
               title="Total Cryptocurrencies"
               value={totalCryptocurrencies}
             ></Statistic>
           </Col>
-          <Col md={8} sm={24} className="stats-item">
+          <Col md={8} xs={12} sm={24} className="stats-item">
             <Statistic
               title="Total Exchanges"
               value={millify(totalExchanges)}
             ></Statistic>
           </Col>
-          <Col md={8} sm={24} className="stats-item">
+          <Col md={8} xs={12} sm={24} className="stats-item">
             <Statistic
               title="Total Market Cap"
               value={millify(totalMarketCap)}
             ></Statistic>
           </Col>
 
-          <Col md={8} sm={24} className="stats-item">
+          <Col md={8} xs={12} sm={24} className="stats-item">
             <Statistic
               title="Total 24h Volume"
               value={millify(total24hVolume)}
             ></Statistic>
           </Col>
-          <Col md={8} sm={24} className="stats-item">
+          <Col md={8} xs={12} sm={24} className="stats-item">
             <Statistic
               title="Total Markets"
               value={millify(totalMarkets)}
             ></Statistic>
           </Col>
-          <Col md={8} sm={24} className="stats-item">
+          <Col md={8} xs={12} sm={24} className="stats-item">
             <Statistic
               title="Total Coins"
               value={millify(totalCoins)}
@@ -68,7 +69,7 @@ const Homepage = () => {
         <div className="cryptocurrencies-heading">
           <Title level={2}>Top 12 Crypto Currencies In The World</Title>
           <Title level={4}>
-            <Link to="/cryptocurrencies">Show More</Link>
+            <Link to="/cryptocurrencies">Show More <RightOutlined/></Link>
           </Title>
         </div>
         <Cryptocurrencies simplified />
@@ -77,7 +78,7 @@ const Homepage = () => {
         <div className="news-heading">
           <Title level={2}>Latest Crypto News</Title>
           <Title level={4}>
-            <Link to="/news">Show More</Link>
+            <Link to="/news">Show More <RightOutlined/></Link>
           </Title>
         </div>
         <News simplified />
