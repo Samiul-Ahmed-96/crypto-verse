@@ -132,7 +132,8 @@
   font-size: 16px;
   font-weight: 600;
 }
-.cryptocurrencies-container a {
+.cryptocurrencies-container a,
+.news-heading a {
   color: #001529;
   font-size: 14px;
 }
