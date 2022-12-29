@@ -9,7 +9,7 @@ import {
   ThunderboltOutlined,
   TrophyOutlined
 } from "@ant-design/icons";
-import { Col, Row, Spin, Typography } from "antd";
+import { Card, Col, Row, Spin, Typography } from "antd";
 import HTMLReactParser from "html-react-parser";
 import millify from "millify";
 import { useState } from "react";
@@ -112,36 +112,45 @@ const CryptoDetails = () => {
             <Title level={3} className="coin-details-heading">{cryptoDetails.name} Value Statistics</Title>
             <p>An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
+          <Row gutter={[12, 12]}>
           {stats.map(({ icon, title, value }) => (
             <Col className="coin-stats">
-              <Col className="coin-stats-name">
+              <Card className="coin-stats-name">
+                <div>
                 <Text>{icon}</Text>
-                <Text>{title}</Text>
-              </Col>
-              <Text className="stats">{value}</Text>
+                <Title level={5}>{title}</Title>
+                </div>
+                <Text className="stats">{value}</Text>
+              </Card>
             </Col>
           ))}
+          </Row>
         </Col>
         <Col className="other-stats-info">
           <Col className="coin-value-statistics-heading">
             <Title level={3} className="coin-details-heading">Other Stats Info</Title>
             <p>An overview showing the statistics of {cryptoDetails.name}, such as the base and quote currency, the rank, and trading volume.</p>
           </Col>
-          {genericStats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
-              <Col className="coin-stats-name">
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
-              </Col>
-              <Text className="stats">{value}</Text>
-            </Col>
-          ))}
+         <Row gutter={[12, 12]}>
+         {genericStats.map(({ icon, title, value }) => (
+          <Col className="coin-stats">
+          <Card className="coin-stats-name">
+            <div>
+            <Text>{icon}</Text>
+            <Title level={5}>{title}</Title>
+            </div>
+            <Text className="stats">{value}</Text>
+          </Card>
+        </Col>
+        ))}
+         </Row>
         </Col>
       </Col>
       <Col className="coin-desc-link">
         <Row className="coin-desc">
           <Title level={3} className="coin-details-heading">What is {cryptoDetails.name}?</Title>
-          {HTMLReactParser(cryptoDetails.description)}
+          <br/>
+          <p>{HTMLReactParser(cryptoDetails.description)}</p>
         </Row>
         <Col className="coin-links">
           <Title level={3} className="coin-details-heading">{cryptoDetails.name} Links</Title>

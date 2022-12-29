@@ -25,38 +25,38 @@ const Homepage = () => {
       <div className="global-stats-wrapper">
       <Title level={2}>Global Crypto Stats</Title>
         <Row gutter={[32, 32]}>
-          <Col md={8} className="stats-item">
+          <Col md={8} sm={24} className="stats-item">
             <Statistic
               title="Total Cryptocurrencies"
               value={totalCryptocurrencies}
             ></Statistic>
           </Col>
-          <Col md={8} className="stats-item">
+          <Col md={8} sm={24} className="stats-item">
             <Statistic
               title="Total Exchanges"
               value={millify(totalExchanges)}
             ></Statistic>
           </Col>
-          <Col md={8} className="stats-item">
+          <Col md={8} sm={24} className="stats-item">
             <Statistic
               title="Total Market Cap"
               value={millify(totalMarketCap)}
             ></Statistic>
           </Col>
 
-          <Col md={8} className="stats-item">
+          <Col md={8} sm={24} className="stats-item">
             <Statistic
               title="Total 24h Volume"
               value={millify(total24hVolume)}
             ></Statistic>
           </Col>
-          <Col md={8} className="stats-item">
+          <Col md={8} sm={24} className="stats-item">
             <Statistic
               title="Total Markets"
               value={millify(totalMarkets)}
             ></Statistic>
           </Col>
-          <Col md={8} className="stats-item">
+          <Col md={8} sm={24} className="stats-item">
             <Statistic
               title="Total Coins"
               value={millify(totalCoins)}

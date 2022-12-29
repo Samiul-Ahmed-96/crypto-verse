@@ -1,4 +1,4 @@
-import { Avatar, Card, Col, Row, Select, Typography } from 'antd';
+import { Avatar, Card, Col, Row, Select, Spin, Typography } from 'antd';
 import moment from 'moment';
 import React, { useState } from 'react';
 import { useGetCryptosQuery } from '../services/cryptoApi';
@@ -20,7 +20,8 @@ const News = ({simplified}) => {
 
   console.log(cryptoNews?.value);
 
-  if(!cryptoNews?.value) return 'Loading...'
+  if(!cryptoNews?.value) return <Spin/>
+
 
   return (
     <>
@@ -50,7 +51,10 @@ const News = ({simplified}) => {
 
     <Row gutter={[24, 24]}>
     {cryptoNews.value.map((news, i) => (
-      <Col xs={24} sm={12} lg={8} key={i}>
+      <Col  xs={24}
+      sm={24}
+      md={24}
+      lg={8} key={i}>
         <Card hoverable className="news-card">
           <a href={news.url} target="_blank" rel="noreferrer">
             <div className="news-image-container">

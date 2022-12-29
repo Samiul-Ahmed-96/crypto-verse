@@ -1,4 +1,4 @@
-import { Card, Col, Input, Row, Typography } from "antd";
+import { Card, Col, Input, Row, Spin, Typography } from "antd";
 import millify from "millify";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -19,7 +19,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredData);
   }, [searchTerm, cryptoList]);
 
-  if (isFetching) return "Loading";
+  if (isFetching) return <Spin/>;
 
   return (
     <>
@@ -36,7 +36,7 @@ const Cryptocurrencies = ({ simplified }) => {
         {cryptos?.map((currency) => (
           <Col
             xs={24}
-            sm={12}
+            sm={24}
             lg={6}
             className="crypto-card"
             key={currency.uuid}

@@ -18,7 +18,7 @@ const Exchanges = () => {
       ) : (
         <Row>
           {exchangesList.map((exchange) => (
-            <Col md={24}>
+            <Col md={24} sm={24}>
               <Collapse>
                 <Panel
                   key={exchange.uuid}
@@ -43,11 +43,16 @@ const Exchanges = () => {
                   <Col md={6}></Col>
 
                   <Row>
-                    <Col md={8}>Price : ${millify(exchange.price)}</Col>
-                    <Col md={8}>
+                    <Col md={6} sm={24}>Price : ${millify(exchange.price)}</Col>
+                    
+                    <Col md={6} sm={24}>Rank : ${millify(exchange.rank)}</Col>
+                  
+                    <Col md={6} sm={24}>
                       Number Of Markets : {millify(exchange.numberOfMarkets)}
                     </Col>
-                    <Col md={8}>Btc Price : {millify(exchange.btcPrice)}%</Col>
+                    <Col md={
+                      6
+                    } sm={24}>Btc Price : {millify(exchange.btcPrice)}%</Col>
                   </Row>
                 </Panel>
               </Collapse>

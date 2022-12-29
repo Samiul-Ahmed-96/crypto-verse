@@ -8,9 +8,7 @@ import {
   Cryptocurrencies,
   CryptoDetails,
   Exchanges,
-  Homepage,
-  Navbar,
-  News
+  Homepage, News, Sidemenu
 } from "./components";
 
 function App() {
@@ -18,7 +16,7 @@ function App() {
     <div className="App">
       <div className="main-layout">
         <div className="navbar">
-          <Navbar />
+          <Sidemenu />
         </div>
         <div className="main">
           <Layout>

@@ -1,9 +1,14 @@
+::-webkit-scrollbar {
+  display: none;
+}
 .main {
-  width: 85%;
-  min-height: 100vh;
+  height: 100vh;
   background: #f0f2f5;
   padding: 60px;
   float: right;
+  flex: 0.88;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .coin-image {
@@ -14,8 +19,12 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
-
 }
+
+.main-layout {
+  display: flex;
+}
+
 .global-stats-wrapper {
   margin-top: 25px;
 }
@@ -29,10 +38,9 @@
   background: #001529;
   text-align: center;
   padding: 60px 0px;
-  width: 15%;
-  position: fixed;
   height: 100vh;
   float: left;
+  flex: 0.12;
 }
 
 .logo-container {
@@ -98,4 +106,121 @@
   color: #000;
   font-size: 16px;
   font-weight: 500;
+}
+
+.menu-control-container {
+  display: none !important;
+  position: absolute !important;
+  right: 10px !important;
+  top: 12px !important;
+  font-size: 1.2rem !important;
+  border: none !important;
+}
+.coin-value-statistics-heading {
+  margin: 20px 0px;
+}
+
+.coin-desc {
+  margin: 20px 0px;
+}
+
+.coin-link h5 {
+  margin-right: 10px;
+}
+@media screen and (max-width: 1440px) {
+  .logo-container {
+    justify-content: start;
+    margin-left: 0px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main {
+    padding: 20px;
+    float: right;
+
+  }
+
+  .navbar {
+    padding: 20px 0px;
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .news-image-container {
+    flex-direction: column-reverse;
+}
+}
+
+@media screen and (max-width: 800px) {
+  .logo-container {
+    justify-content: start;
+    margin-left: 0px;
+    align-items: center;
+    flex-direction: row;
+  }
+  .main-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar {
+    background: #001529;
+
+    padding: 0px 0px;
+  }
+
+  .logo-container {
+    display: flex;
+    margin: 0;
+    background: #001529;
+  }
+
+  .app {
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+
+  .main {
+    flex: 1;
+    margin-top: 60px;
+    margin-left: 0px;
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  .nav-container {
+    height: 8vh;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .menu-control-container {
+    display: block !important;
+  }
+
+  .ant-menu {
+    position: absolute;
+    right: 0px;
+  }
+
+  .home-title {
+    font-size: 1.4rem !important;
+  }
+
+  .show-more {
+    font-size: 1.3rem !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cryptocurrencies-heading,
+  .news-heading{
+    flex-direction: column;
+  }
 }
