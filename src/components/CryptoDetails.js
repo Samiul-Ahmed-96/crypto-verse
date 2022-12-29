@@ -114,7 +114,7 @@ const CryptoDetails = () => {
           </Col>
           <Row gutter={[12, 12]}>
           {stats.map(({ icon, title, value }) => (
-            <Col className="coin-stats">
+            <Col md={6} xs={12} sm={12} className="coin-stats">
               <Card className="coin-stats-name">
                 <div>
                 <Text>{icon}</Text>
@@ -133,7 +133,7 @@ const CryptoDetails = () => {
           </Col>
          <Row gutter={[12, 12]}>
          {genericStats.map(({ icon, title, value }) => (
-          <Col className="coin-stats">
+          <Col md={6} xs={12} sm={12} className="coin-stats">
           <Card className="coin-stats-name">
             <div>
             <Text>{icon}</Text>
