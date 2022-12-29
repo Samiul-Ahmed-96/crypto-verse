@@ -44,7 +44,8 @@ npm start . then you will see the project start on your browser
 https://github.com/Samiul-Ahmed-96/crypto-verse
 
 ## Api
-https://coinranking1.p.rapidapi.com"
+https://coinranking1.p.rapidapi.com
+
 https://bing-news-search1.p.rapidapi.com
 
 ## Live Project Demo
